@@ -198,33 +198,45 @@
 //     return 0;
 // }
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    int A[2][3];
+// int main()
+// {
+//     int A[2][3];
 
-    for (auto &x : A) //if we dont know datatype then use auto to automatically detect datatype
-    {
+//     for (auto&x  : A) //if we dont know datatype then use auto to automatically detect datatype
+//     {
+//         for (auto& y : x)
+//         { //pass refernce for using  for each loop
+//             cin >> y;
+//         }
+//         cout << endl;
+//     }
+//     for (auto &x : A) //if we dont know datatype then use auto to automatically detect datatype
+//     {
+//         for (auto &y : x)
+//         { //pass refernce for using  for each loop
+//             cout << y << " ";
+//         }
+//         cout << endl;
+//     }
+//     return 0;
+// }
 
-        for (auto &y : x)
-        { //pass refernce for using  for each loop
-            cin >> y;
-        }
 
-        cout << endl;
-    }
+// #include <iostream>
+// using namespace std;
 
-    for (auto &x : A) //if we dont know datatype then use auto to automatically detect datatype
-    {
+// int main(){
+//     system("cls");
+//     int A[2][3]={2,4,2,3,4,3};
 
-        for (auto &y : x)
-        { //pass refernce for using  for each loop
-            cout << y << " ";
-        }
-
-        cout << endl;
-    }
-    return 0;
-}
+//     for (auto& x:A){
+//         for(auto& y:x){
+//             cout<<y<<" ";
+//         }
+//         cout<<endl;
+//     }
+//     return 0;
+// }

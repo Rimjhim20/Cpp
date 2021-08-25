@@ -113,21 +113,23 @@
 // • Constructors of base class is executed first then the constructor of derived class is executed.
 // • By default, non - parameterised constructor of base class is executed.
 // • parameterised constructor of base class must be called from derived class constructor
-//                          Explain using base and derived class
+
+
+//    Explain using base and derived class
 // #include <iostream>
-//                      using namespace std;
+//  using namespace std;
 // class Base
 // {
 // public:
-//     Base() { cout << "Non-param Base" << endl; }
-//     Base(int x) { cout << "Param of Base " << x << endl; }
+//     Base() { cout << "Non-param Base or Default constructor" << endl; }
+//     Base(int x) { cout << "Param of Base(Parameterized) " << x << endl; }
 // };
 // class Derived : public Base
 // {
 // public:
 //     Derived() { cout << "Non-Param Derived" << endl; }
 //     Derived(int y) { cout << "Param of Derived " << y << endl; }
-//     Derived(int x, int y) : Base(x)
+//     Derived(int x, int y) : Base(x)    //Calling Parametrized constructor of base class from derived class constructor
 //     {
 //         cout << "Param of Derived " << y << endl;
 //     }
@@ -136,6 +138,11 @@
 // {
 //     Derived d(5, 10);
 // }
+
+//********Note- Default constructor of Base(parent) executed first
+//              then Default Derived(child) executed 
+//*If we pass argument then base class default executed then it comes to derived class and execute param of derived
+          
 
 // Access Specifiers
 // • Private - Accessible only inside a class
@@ -285,3 +292,6 @@
 //          << "Daily wage of " << p1.getName() << " is
 //                                                 "<<p1.getWage()<<endl;
 // }
+
+
+

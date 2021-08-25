@@ -10,6 +10,8 @@
 // • q-p gives number of elements between 2 pointers p and q
 // • Pointers can be of many levels
 // • Double pointer is used for accessing 2D arrays
+
+
 // Program to Demonstrate Pointer Syntax
 // #include <iostream>
 // using namespace std;
@@ -23,6 +25,7 @@
 //     cout << *p << endl;
 //     return 0;
 // }
+
 
 // Program to Demonstrate Pointer Arithmetic
 
@@ -58,3 +61,61 @@
 // • It cannot be modified to refer other variable
 // • Syntax for reference declaration is
 // • Int &y=x;
+
+
+// #include <iostream>
+//     using namespace std;
+// int main()
+// {
+//     int x=10;
+//     int &y=x; //reference must be initialise at the time of declaration
+
+//     cout << x <<endl;
+//     y++;
+//     x++;
+//     cout<<x<<endl;
+//      cout<<&x<<" "<<&y;
+// }
+
+
+//Dynamic Allocation
+
+//creating array in heap
+// #include <iostream>
+// using namespace std;
+// int main(){
+//     int *p=new int[5];
+//     p[0]=12;
+//     p[1]=13;
+//     cout<<p[1]<<endl;
+//     delete []p;
+//     p=nullptr;  //for making pointer null use nullptr
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int size;
+//     cout<<"Enter number of elements\n";
+//     cin>>size;
+//     int A[size];
+//     cout<<"Size of A is:"<<sizeof A <<endl;
+   
+//     return 0;
+// }
+
+
+//using heap memory Alocation and pointer
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int *p=new int[20];
+//     delete []p;
+
+//     p=new int[40];
+   
+//     return 0;
+// }
