@@ -119,18 +119,19 @@
 // Abstract class
 // • Class having pure virtual function is a abstract class
 // • Abstract class can have concrete also.
-// • Object of abstract class cannot be created
+// • Object of abstract class cannot be created i.e can't create Base b;
 // • Derived class can must override pure virtual function, otherwise it will also become a abstract
 // class.
-// • Pointer of abstract class can be created
+// • Pointer of abstract class can be created i.e Base *p=new Derived()
 // • Pointer of abstract class can hold object of derived class
 // • Abstract classes are used for achieving polymorphism
 // •
 // • Base class can be
 // • Concrete
-// • Abstract with some concrete and some pure virtual functions
-// • All virtual functions
+// • Abstract with some concrete and some pure virtual functions-->abstract class
+// • All virtual functions(for achieving polymorphism )...this class is also called interface-->also abstract class
 // Explain using base and derived class
+//#include <iostream>
 // using namespace std;
 // class Base
 // {
