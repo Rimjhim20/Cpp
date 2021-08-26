@@ -1,6 +1,5 @@
 // #include <iostream>
 // using namespace std;
-
 // class A
 // {
 //     int p;        //normal data member of class
