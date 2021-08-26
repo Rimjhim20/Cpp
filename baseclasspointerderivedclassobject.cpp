@@ -68,16 +68,16 @@
 //         cout << "Music Playing" << endl;
 //     }
 // };
-int main(){
+//int main(){
 //     AdvanceCar a;
 //     BasicCar *ptr=&a;
 //     ptr->start(); //we can only start function
 //    ptr->playMusic(); //error
 
 
-    BasicCar b;
-    AdvanceCar *q=&b; //error
-}
+  //  BasicCar b;
+  //  AdvanceCar *q=&b; //error
+//}
 
 
 

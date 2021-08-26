@@ -15,7 +15,7 @@
 // public:
 //     void fun()
 //     {
-//         cout <<“fun of Derived "<<endl;
+//         cout <<“fun of Derived "<<endl; //its already borrowing function from base class but it is not using that one it us redefinig its own function so writing them once again or redefining again   is called function overriding
 //     }
 // };
 // int main()
@@ -25,26 +25,58 @@
 //     d.fun();
 // }
 
+
+
 // Virtual Functions
 // • Virtual functions are used for achieving polymorphism
 // • Base class can have virtual functions
 // • Virtual functions can be overrides in derived class
 // • Pure virtual functions must be overrides by derived class
+//  #include <iostream>
+//  using namespace std;
+// class Base{
+//     public:
+//     virtual void fun(){
+//         cout<<"func of base"<<endl;
+//     }
+// };
+// class Derived: public Base
+// {
+//     public:
+//     void fun(){
+//         cout<<"fun of derived"<<endl;
+//     }
+// };
+
+// int main(){
+//     Derived d;
+//     // d.fun(); //output- fun of derived
+//     Base *ptr=&d;  //pointer of base pointinig to object of derived
+//     ptr-> fun();   //overrided func called//output-func of base  to make return func of derived make base func virtual
+    
+// }
+
+//Note:- here BasiCar is pointer and AdvanceCar is object
+
 // class BasicCar
 // {
 // public:
-//     virtual void start() { cout << "BasicCar started" << endl; }
+//     virtual void start()
+// { cout << "BasicCar started" << endl; }
 // };
 // class AdvanceCar : public BasicCar
 // {
 // public:
-//     void start() { cout << "AdvanceCar Started" << endl; }
+//     void start()
+// { cout << "AdvanceCar Started" << endl; }
 // };
 // int main()
 // {
-//     BasicCar *p = new AdvanceCar();
+//     BasicCar *p = new AdvanceCar();  //when using base class function we call a overrided function then base class function will be called .
 //     p->start();
 // }
+//Example-Hehehehe-- in C++ if we point donkey(base class) as a horse(derived class) then it run run like a horse(derived class) not like a donkey to execute like a donkey we use virtual function
+
 
 // Polymorphism
 // • Same name different actions
@@ -55,9 +87,13 @@
 //     Summary : class car is defined,
 //               then sub classes override,
 //               then base class method made as virtual the pure virtual class Car
+
+//#include <iostream>
+//using namespace std;
+//class Car
 // {
 // public:
-//     virtual void start() = 0;
+//     virtual void start() = 0; //this is pure virtual function i.e those function must be overrided by derived class (pure virtual function purpose is to achieve polymorphism)otherwise derrived class become abstract we can't create object of that class when class inherit from this class then inherited class also become abstract.
 // };
 // class Innova : public Car
 // {
@@ -77,6 +113,8 @@
 //     p = new Swift();
 //     p->start();
 // }
+
+
 
 // Abstract class
 // • Class having pure virtual function is a abstract class
@@ -118,6 +156,7 @@
 //     d.fun1();
 //     d.fun2();
 // }
+
 
 // Program to Demonstrate Polymorphism
 
