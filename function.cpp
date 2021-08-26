@@ -262,6 +262,7 @@
 // }
 
 
+
 // Static variables
 // • They have local scope but remain in memory thru out the execution of program
 // • They are created in code section
@@ -282,6 +283,7 @@
 //     fun();
 //     return 0;
 //  }
+
 
 // #include <iostream>
 //  using namespace std;
@@ -339,7 +341,6 @@
 
 // #include <iostream>
 // using namespace std;
-
 // void fun(int n){
 //     if(n>0){
   //   fun(n-1);
@@ -356,19 +357,51 @@
 
 
 //Local and Global variable
+//Note-Variables have local scope in c++
 // #include <iostream>
 // using namespace std;
 // int g=5;
 // void fun(){
-//     int a=10;
+//   int a=10;   //static int a=10;
 //     a++;
 //     g++;
-//    cout<<a<<" " <<g;
+//    cout<<a<<" " <<g<<"\n ";
 // }
 
 // int main(){
-//     cout <<g;
+//     cout <<g<<"\n";
 //     fun();
-//     cout<<g;
-//     fun
+//     cout<<g <<"\n";
+//     fun();
+// };
+
+
+// output-
+// 5
+// 11 6 
+//  6
+// 11 7
+
+// output in static case-
+// 5
+// 11 6 
+//  6
+// 12 7
+
+
+//Scoping Rule
+
+// #include <iostream>
+// using namespace std;
+// int x=10;
+// int main(){
+//     int x=20;
+//     {
+//         int x=30;
+//         cout<<x<<endl;
+//     }
+//     cout<<x<<endl;
+//     cout<<::x<<endl;
 // }
+
+//outut- 30 20 10
