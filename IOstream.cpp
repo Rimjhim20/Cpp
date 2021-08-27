@@ -1,4 +1,5 @@
 // Streams
+// we use to  accessing data from outside the world 
 // • I/O Streams are used for input and output data to and from the program
 // • C++ provides class for accessing input output operations
 // • Iostream is a base class for all classes
@@ -7,20 +8,35 @@
 // • ostream is for output
 // • Cout is an object of ostream
 // •
-// • ifstream is a file input stream
-// • ofstream is a file output stream
+// • ifstream is a --> file input stream
+// • ofstream is a --> file output stream
+
 // Writing in a File
+// #include <iostream>
+// #include <fstream>
+
+// using namespace std;
 // int main()
 // {
-//     ofstream of("Test.txt", ios::trunc);
+//     ofstream of("My.txt", ios::trunc);  //trunc-->tuncate
 //     of << "John" << endl;
 //     of << 25 << endl;
 //     of << "CS" << endl;
 //     of.close();
 // }
+
+
+
 // Reading from File int main()
+// Writing in a File
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+// int main()
 // {
-//     ifstream ifs("Test.txt");
+//     ifstream ifs;
+// ifs.open("My.txt");
+// if(ifs) cout<<"File is opened"<<endl;
 //     string name;
 //     int roll;
 //     string branch;
@@ -30,6 +46,9 @@
 //          << branch << endl;
 //     ifs.close();
 // }
+
+
+
 
 // Serialization
 // • Serialization is a process of string and retrieving state of an object
@@ -75,7 +94,7 @@
 // }
 // int main()
 // {
-//     ofstream ofs("Test.txt");
+//     ofstream ofs("My.txt");
 //     Student s1("John", 10, "CS");
 //     ofs << s1;
 //     ofs.close();
@@ -85,6 +104,10 @@
 //     cout << s1;
 // }
 
+
+
+//Q. wap to store an retrieve list of item in a file use serialization
+//Class items should have --> 1.name 2.price 3.Quantity
 // Program to Store Items in a File
 
 // #include <iostream>
@@ -160,3 +183,12 @@
 //        << i.qty << endl;
 //     return os;
 // }
+
+
+
+//Manipulator --> it use useful for formatting string  
+//Ex- endl is manipulator
+
+//For Integer -> hex,oct,dec
+//Float -> fixed ,scientific
+//other--> set(),left,right

@@ -1,5 +1,5 @@
 //Destructor ---> it is a member function of class that is useful for releasing the resources acquired by the object of class
-//in destructor --> Derived destructor called first then base detstructor..in reverese order of constructor ---> 
+//in destructor --> Derived destructor called first then base detstructor..in reverese order of constructor i.e constructor called top to bottom whereas destructor cald from bottom to top ---> 
 // #include <iostream>
 // using namespace std;
 
@@ -136,20 +136,16 @@ using namespace std;
 
 class Base{
     public:
-    Base(){
-        cout<<"Base Constructor"<<endl;
-    }
-     virtual ~Base(){
+    
+    virtual  ~Base(){
 cout<<"Base Destructor"<<endl;
      }
 };
 
 class Derived:public Base{
     public:
-    Derived(){
-        cout<<"Derived Constructor"<<endl;
-    }
-    virtual  ~ Derived(){
+    
+      ~ Derived(){
          cout<<"Derived Destructor"<<endl;
     }
 };
@@ -159,6 +155,7 @@ void fun()
       delete p;
 }
 int main(){
-    Base *p=new Derived();
-    delete p;
+    fun();
 }
+
+//note- we use virtual before ~Base to call derived destructor also
