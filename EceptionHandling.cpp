@@ -8,6 +8,8 @@
 // • Catch-All can catch all exception
 // • Catch-All must be a last block
 // • If classes in inheritance are used in catch block then child class should come first
+
+
 // #include <iostream>
 // using namespace std;
 // int division(int a,int b)throw(int)
@@ -75,3 +77,39 @@
 // s.push(8);
 // }
 
+
+// //All about throw 
+// #include<iostream>
+// using namespace std;
+// class MyException:public exception{
+
+// };
+
+// int division(int x,int y)  //for our exception class to throw then write-->int division(int x,int y) throw(MyException))
+// {
+//     if(y==0)
+//     throw 1;  //we can throw any thing like number,float,string
+//     return x/y;
+// }
+
+
+//catch(...)   //All catch block-for all type
+
+// class MyException1{
+
+// };
+// class MyException2: public MyException1{
+
+// };
+
+// try{
+
+// }
+
+// catch(MyException e)
+// {
+
+// }
+// catch(MyExecption e){
+
+// }

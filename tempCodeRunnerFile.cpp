@@ -1,25 +1,22 @@
 #include <iostream>
 using namespace std;
-class Car
+int division(int a,int b)throw(int)
 {
-public:
-    virtual void start() = 0;
-};
-class Innova : public Car
-{
-public:
-    void start() { cout << "Innova Started" << endl; }
-};
-class Swift : public Car
-{
-public:
-    void start() { cout << "Swift Started" << endl; }
-};
+if(b==0)
+throw 1;
+return a/b;
+}
 int main()
 {
-    //Car c;
-    Car *p = new Innova();
-    p->start();
-    p = new Swift();
-    p->start();
+int x=10,y=2,z;
+try
+{
+z=division(x,y);
+cout<<z<<endl;
+}
+catch(int e)
+{
+cout<<"Division by zero "<<e<<endl;
+}
+cout<<"Bye"<<endl;
 }
